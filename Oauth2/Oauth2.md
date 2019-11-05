@@ -323,8 +323,7 @@ spring security 支持form表单认证，认证成功后跳转到/login-success
 
 1. 启动项目：添加maven-configurations
 
-![TIM图片20191105213829](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191105213829.png)
-
+![TIM图片20191105213829](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E5%9B%BE%E7%89%8720191105213829.png)
 2. 访问http://localhost:8080/security-spring-security/login
 
 3. 登录页面
