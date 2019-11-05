@@ -2,6 +2,7 @@ package com.ccfish.security.springmvc.init;
 
 import com.ccfish.security.springmvc.config.ApplicationConfig;
 import com.ccfish.security.springmvc.config.WebConfig;
+import com.ccfish.security.springmvc.config.WebSecurityConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class SpringApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{ApplicationConfig.class};
+        return new Class[]{ApplicationConfig.class, WebSecurityConfig.class};
     }
 
     @Override
