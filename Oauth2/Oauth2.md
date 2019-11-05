@@ -20,7 +20,7 @@
 
  		它的交互流程是，用户认证成功后，在服务端生成用户相关的数据保存在session（当前会话）中，发给客户端的session_id存放到cookie中，这样用户客户端请求时带上session_id就可以验证服务器端是否存在session数据，以此完成用户的合法校验，当用户退出系统或session过期销毁时，客户端的session_id也就无效了
 
-![TIM截图20191103194420](..\Oauth2\TIM截图20191103194420.png)
+![TIM截图20191103194420](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191103194420.png)
 
 ​		基于token方式如下图：
 
