@@ -26,7 +26,7 @@
 
 ​		它的交互流程时，用户认证成功后，服务端生成一个token发给客户端，客户端可以放到cookie或localStorage等存储中，每次请求时带上token，服务端收到token通过验证后即可确认用户身份。
 
-​		![TIM截图20191103194758](C:\Users\ciaos\Desktop\doc\Oauth2\TIM截图20191103194758.png)
+​		![TIM截图20191103194758](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191103194758.png)
 
 ​		基于session的认证方式有servlet规范定制，服务端要存储session信息需要占用内存资源，客户端需要支持cookie；基于token的方式一般不需要服务端存储token，并且不限制客户端的存储方式。如今移动互联网时代更多类型的客户端需要接入系统，系统多是采用前后端分离的架构进行实现，所以基于token的方式更适合。
 
@@ -54,20 +54,20 @@
 
 ​		主体、资源、权限关系如下图
 
-![TIM截图20191103201252](C:\Users\ciaos\Desktop\doc\Oauth2\TIM截图20191103201252.png)
+![TIM截图20191103201252](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191103201252.png)
 
 主体、资源、权限相关的数据模型如下：
 
 		1. 主体（用户id、账号、密码、...)
   		2. 资源（资源id、资源名称、访问地址、...）
-        		3. 权限（权限id、权限标识、权限名称、资源id、...）
+                		3. 权限（权限id、权限标识、权限名称、资源id、...）
             		4. 角色（角色id、角色名称、...）
-                		5. 角色和权限关系（角色id、权限id、...）
+                      		5. 角色和权限关系（角色id、权限id、...）
           		6. 主体（用户）和角色关系（用户id、角色id、...）
 
 主体（用户）、资源、权限关系如下图：
 
-![TIM截图20191103202146](C:\Users\ciaos\Desktop\doc\Oauth2\TIM截图20191103202146.png)
+![TIM截图20191103202146](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191103202146.png)
 
 通常企业开发中将资源和权限表合并为一张权限表，如下：
 
@@ -80,7 +80,7 @@
 
 修改后的数据模型之间关系如下图：
 
-![TIM截图20191103202726](C:\Users\ciaos\Desktop\doc\Oauth2\TIM截图20191103202726.png)
+![TIM截图20191103202726](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191103202726.png)
 
 ##### 1.4 RBAC
 
@@ -90,7 +90,7 @@
 
 ​		RBAC基于角色的访问控制（Role-Based Access Control) 是按角色进行授权，比如：主体的角色为总经理可以查询企业运行报表，查询员工工资等，访问控制流程如下
 
-![TIM图片20191104213805](C:\Users\ciaos\Desktop\doc\Oauth2\TIM图片20191104213805.png)
+![TIM图片20191104213805](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191104213805.png)
 
 根据上图中的判断逻辑，授权代码可表示如下：
 
@@ -104,7 +104,7 @@ if(主体.hasRole("总经理角色id")){
 
 ​		RBAC（Resource-Based Access Control） 是按资源（或权限）进行授权，比如：用户必须拥有查询工资权限才可以查询员工工资信息等，访问控制流程如下：
 
-![TIM图片20191104213805](C:\Users\ciaos\Desktop\doc\Oauth2\TIM图片20191104213805.png)
+![TIM图片20191104213805](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191104213805.png)
 
 根据上图中的判断逻辑，授权代码可以表示为：
 
@@ -323,13 +323,13 @@ spring security 支持form表单认证，认证成功后跳转到/login-success
 
 1. 启动项目：添加maven-configurations
 
-![TIM图片20191105213829](C:\Users\ciaos\Desktop\doc\Oauth2\TIM图片20191105213829.png)
+![TIM图片20191105213829](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191105213829.png)
 
 2. 访问http://localhost:8080/security-spring-security/login
 
 3. 登录页面
 
-   ![TIM截图20191105213931](C:\Users\ciaos\Desktop\doc\Oauth2\TIM截图20191105213931.png)
+   ![TIM截图20191105213931](https://github.com/faker011/spring-security/blob/master/Oauth2/TIM%E6%88%AA%E5%9B%BE20191105213931.png)
 
 4. 登录成功
 
